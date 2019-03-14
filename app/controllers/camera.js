@@ -1,4 +1,4 @@
-const connection = require('../../index');
+const connection = require('../../config/database');
 const responseModel = require('../models/response');
 
 const getCamera = (req, res) => {

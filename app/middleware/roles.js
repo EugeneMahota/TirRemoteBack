@@ -1,4 +1,4 @@
-const connection = require('../../index');
+const connection = require('../../config/database');
 const jwt = require('jsonwebtoken');
 const {secret} = require('../../config/app').jwt;
 

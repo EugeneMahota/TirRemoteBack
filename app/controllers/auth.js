@@ -1,4 +1,4 @@
-const connection = require('../../index');
+const connection = require('../../config/database');
 
 const jwt = require('jsonwebtoken');
 const {secret, tokens} = require('../../config/app').jwt;
@@ -6,52 +6,66 @@ const bCrypt = require('bcrypt');
 
 
 const signIn = function (req, res) {
-    connection.query('CALL checking_user_login(?)', req.body.login, (err, result) => {
-        try {
-            const user = result[0][0];
-            if (user.status) {
-                const isValid = bCrypt.compareSync(req.body.password, user.password);
-                if (isValid) {
-                    const payload = {id: user.user_id, login: user.login, name: user.name, type: tokens.access.type};
-                    const options = {expiresIn: tokens.access.expiresIn};
-                    const token = jwt.sign(payload, secret, options);
-                    connection.query('CALL list_roles_user(?)', user.user_id, (err, result) => {
-                        const roles = result[0];
-                        res.send({status: 200, token: token, name: user.name, roles: roles});
-                    });
+    var user, token;
+
+    connection.query('CALL checking_user_login(?)', req.body.login)
+        .then(result => {
+            user = result[0][0];
+            const isValid = bCrypt.compareSync(req.body.password, user.password);
+            if (isValid) {
+                const payload = {id: user.user_id, login: user.login, name: user.name, type: tokens.access.type};
+                const options = {expiresIn: tokens.access.expiresIn};
+                token = jwt.sign(payload, secret, options);
+                return connection.query('CALL list_roles_user(?)', user.user_id);
+            } else {
+                return null;
+            }
+        })
+        .then(result => {
+            if (result) {
+                const roles = result[0];
+                res.send({status: 200, token: token, name: user.name, roles: roles});
+            } else {
+                res.send({status: 401, msg: 'Неверный пароль!'});
+            }
+        })
+        .catch(err => {
+            res.send({status: 500, msg: 'Ошибка авторизации!'});
+        })
+};
+
+
+const refreshIn = (req, res) => {
+    var user;
+
+    var refresh = function () {
+        const {token} = req.body;
+        const verify = jwt.verify(token, secret);
+        connection.query('CALL checking_user_id(?)', verify.id)
+            .then(result => {
+                user = result[0][0];
+                if (user.user_id === verify.id) {
+                    return connection.query('CALL list_roles_user(?)', verify.id);
+                } else {
+                    return null;
+                }
+            })
+            .then(result => {
+                if (result) {
+                    var roles = result[0];
+                    res.send({status: 200, name: user.name, roles: roles});
                 } else {
                     res.send({status: 401, msg: 'Ошибка авторизации!'});
                 }
-            } else {
-                res.send({status: 401, msg: 'Ошибка авторизации!'});
-            }
-        } catch (err) {
-            res.send({status: 500, msg: 'Ошибка сервера!'});
-        }
-    });
-};
+            }).catch(err => {
+            res.send({status: 500, msg: 'Ошибка авторизации! ' + err.message});
+        });
+    };
 
-const refreshIn = (req, res) => {
-    const {token} = req.body;
-    if (token) {
-        try {
-            const user = jwt.verify(token, secret);
-            connection.query('CALL checking_user_id(?)', user.id, (err, result) => {
-                const user = result[0][0];
-                if (user.user_id) {
-                    connection.query('CALL list_roles_user(?)', user.user_id, (err, result) => {
-                        const roles = result[0];
-                        res.send({status: 200, name: user.name, roles: roles});
-                    });
-                } else {
-                    res.send({status: 400, msg: 'Пользователя не существует!'});
-                }
-            });
-        } catch (err) {
-            res.send({status: 401, msg: 'Ошибка авторизации!'});
-        }
-    } else {
-        res.send({status: 401, msg: 'Ошибка авторизации!'});
+    try {
+        refresh();
+    } catch (err) {
+        res.send({status: 500, msg: 'Ошибка авторизации! ' + err.message});
     }
 };
 

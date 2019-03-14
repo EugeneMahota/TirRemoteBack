@@ -1,11 +1,11 @@
 const jwt = require('jsonwebtoken');
 const {secret} = require('../../config/app').jwt;
-const connection = require('../../index');
+const connection = require('../../config/database');
 
 module.exports = (req, res, next) => {
     const token = req.get('Authorization');
     if (!token) {
-        res.send({status: 401, msg: 'Ошибка авторизации!'});
+        res.sendStatus(401);
     } else {
         try {
             const user = jwt.verify(token, secret);
@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
 
         } catch (err) {
             if (err instanceof jwt.JsonWebTokenError) {
-                res.send({status: 401, msg: 'Ошибка авторизации!'});
+                res.sendStatus(401);
             }
         }
     }

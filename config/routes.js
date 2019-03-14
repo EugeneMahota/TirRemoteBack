@@ -10,12 +10,18 @@ const gameTir = require('../app/controllers/game-tir');
 const gameArcade = require('../app/controllers/game-arcade');
 const gamePrize = require('../app/controllers/game-prize');
 const position = require('../app/controllers/position');
+const report = require('../app/controllers/report');
 
 const upload = require('../app/middleware/upload');
 const authMiddleware = require('../app/middleware/auth');
 const roles = require('../app/middleware/roles');
 
 module.exports = (app) => {
+    //report
+    app.post('/report/event', authMiddleware, report.reportEvent);
+    app.post('/report/game', authMiddleware, report.reportGame);
+    app.post('/report/user', authMiddleware, report.reportUser);
+
     //position
     app.get('/position', authMiddleware, roles.position, position.getPosition);
     app.post('/position', authMiddleware, roles.position, position.postPosition);
