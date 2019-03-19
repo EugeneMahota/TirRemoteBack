@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbaa348-96df-4d88-8e21-cc3c2face1ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/report.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/camera.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/game-arcade.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game-arcade.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/game-prize.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game-prize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/game-tir.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/game-tir.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/gun.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/gun.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/person.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/position.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/position.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/rele.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/rele.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/role.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/souvenir.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/souvenir.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/middleware/roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware/roles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -124,8 +106,11 @@
     <session id="-289217983">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -140,12 +125,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1569" />
+          <entry key="js" value="1693" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1569" />
+          <entry key="JavaScript" value="1693" />
         </counts>
       </usages-collector>
     </session>
@@ -155,17 +140,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
+            <state relative-caret-position="621">
               <caret line="56" column="75" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            <state relative-caret-position="204">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -173,17 +158,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="374">
+              <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/middleware/roles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="16" column="90" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
+            <state relative-caret-position="340">
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -240,13 +225,13 @@
         <option value="$PROJECT_DIR$/app/controllers/rele.js" />
         <option value="$PROJECT_DIR$/app/controllers/role.js" />
         <option value="$PROJECT_DIR$/app/controllers/souvenir.js" />
-        <option value="$PROJECT_DIR$/app/middleware/roles.js" />
-        <option value="$PROJECT_DIR$/config/routes.js" />
         <option value="$PROJECT_DIR$/config/database.js" />
-        <option value="$PROJECT_DIR$/app/controllers/report.js" />
         <option value="$PROJECT_DIR$/app/controllers/auth.js" />
         <option value="$PROJECT_DIR$/app/middleware/auth.js" />
         <option value="$PROJECT_DIR$/app/controllers/user.js" />
+        <option value="$PROJECT_DIR$/app/controllers/report.js" />
+        <option value="$PROJECT_DIR$/config/routes.js" />
+        <option value="$PROJECT_DIR$/app/middleware/roles.js" />
       </list>
     </option>
   </component>
@@ -265,10 +250,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -320,7 +305,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Node js/Backend/Tir/config/routes.js" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Frontend/TirDashboard" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -378,17 +363,20 @@
       <workItem from="1551073031810" duration="15762000" />
       <workItem from="1551252294218" duration="30698000" />
       <workItem from="1551594668582" duration="49911000" />
-      <workItem from="1552551202623" duration="15223000" />
+      <workItem from="1552551202623" duration="15842000" />
+      <workItem from="1552633664602" duration="3760000" />
+      <workItem from="1552893283833" duration="1822000" />
+      <workItem from="1552977633652" duration="1083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="282732000" />
+    <option name="totallyTimeSpent" value="290016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20671141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2147651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -402,7 +390,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.95467424" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.95467424" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -583,31 +571,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/middleware/roles.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="16" column="90" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="204">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
+        <state relative-caret-position="621">
           <caret line="56" column="75" selection-start-line="56" selection-start-column="75" selection-end-line="56" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/report.js">
+    <entry file="file://$PROJECT_DIR$/config/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        <state relative-caret-position="374">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/middleware/roles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
         </state>
       </provider>
     </entry>

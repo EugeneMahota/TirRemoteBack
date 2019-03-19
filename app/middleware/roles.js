@@ -2,6 +2,12 @@ const connection = require('../../config/database');
 const jwt = require('jsonwebtoken');
 const {secret} = require('../../config/app').jwt;
 
+const reportGame   = (req, res, next) => {checkingRole(req, res, 'reportGame',    next);};
+
+const reportEvent  = (req, res, next) => {checkingRole(req, res, 'reportEvent',   next);};
+
+const reportUser   = (req, res, next) => {checkingRole(req, res, 'reportUser',    next);};
+
 const position     = (req, res, next) => {checkingRole(req, res, 'position',      next);};
 
 const user         = (req, res, next) => {checkingRole(req, res, 'user',          next);};
@@ -55,5 +61,8 @@ module.exports = {
     listRele,
     listSouvenir,
     listCamera,
-    position
+    position,
+    reportGame,
+    reportEvent,
+    reportUser
 };

@@ -9,8 +9,11 @@ const reportEvent = (req, res) => {
 
     const errors = req.validationErrors();
 
+    var dateStart = new Date(+data.dateStart);
+    var dateEnd = new Date(+data.dateEnd);
+
     if(!errors) {
-        connection.query('CALL report_events(?,?)', [data.dateStart, data.dateEnd])
+        connection.query('CALL report_events(?,?)', [dateStart, dateEnd])
             .then(result => {
                 res.send(responseModel.responseData(null, result));})
             .catch(err => {
@@ -29,8 +32,11 @@ const reportGame = (req, res) => {
 
     const errors = req.validationErrors();
 
+    var dateStart = new Date(+data.dateStart);
+    var dateEnd = new Date(+data.dateEnd);
+
     if(!errors) {
-        connection.query('CALL report_games(?,?)', [data.dateStart, data.dateEnd])
+        connection.query('CALL report_games(?,?)', [dateStart, dateEnd])
             .then(result => {
                 res.send(responseModel.responseData(null, result));})
             .catch(err => {
@@ -49,8 +55,11 @@ const reportUser = (req, res) => {
 
     const errors = req.validationErrors();
 
+    var dateStart = new Date(+data.dateStart);
+    var dateEnd = new Date(+data.dateEnd);
+
     if(!errors) {
-        connection.query('CALL report_users(?,?)', [data.dateStart, data.dateEnd])
+        connection.query('CALL report_users(?,?)', [dateStart, dateEnd])
             .then(result => {
                 res.send(responseModel.responseData(null, result));})
             .catch(err => {

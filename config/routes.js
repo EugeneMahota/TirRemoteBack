@@ -18,9 +18,9 @@ const roles = require('../app/middleware/roles');
 
 module.exports = (app) => {
     //report
-    app.post('/report/event', authMiddleware, report.reportEvent);
-    app.post('/report/game', authMiddleware, report.reportGame);
-    app.post('/report/user', authMiddleware, report.reportUser);
+    app.post('/report/event', authMiddleware, roles.reportEvent, report.reportEvent);
+    app.post('/report/game', authMiddleware, roles.reportGame, report.reportGame);
+    app.post('/report/person', authMiddleware, roles.reportUser, report.reportUser);
 
     //position
     app.get('/position', authMiddleware, roles.position, position.getPosition);
